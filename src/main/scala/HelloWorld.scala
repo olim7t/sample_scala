@@ -1,5 +1,8 @@
+import Messages._
+
 object HelloWorld {
   def main(args: Array[String]) {
-    println(Resources.message)
+    println(message)
+    println(42 asMessage)
   }
 }

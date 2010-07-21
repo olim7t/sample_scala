@@ -2,7 +2,9 @@ import sbt._
 import FileUtilities.{write, Newline}
 import com.github.olim7t.sbtscalariform._
 
-class SampleProject(info: ProjectInfo) extends DefaultProject(info) with SxrConfig with ScalariformConfig
+class SampleProject(info: ProjectInfo) extends DefaultProject(info) with SxrConfig with ScalariformConfig {
+	val scalatest = "org.scalatest" % "scalatest" % "1.2" % "test"
+}
 
 trait SxrConfig extends BasicScalaProject with MavenStyleScalaPaths with AutoCompilerPlugins {
   val sxr = compilerPlugin("org.scala-tools.sxr" %% "sxr" % "0.2.6")
