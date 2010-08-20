@@ -39,7 +39,7 @@ trait SxrAutoConfig extends SxrBaseConfig with AutoCompilerPlugins {
 
 // To use a local build of sxr :
 trait SxrLocalConfig extends SxrBaseConfig {
-  val sxrPath = "/tmp/sxr_2.8.0-0.2.6-SNAPSHOT.jar"
+  val sxrPath = "/Users/oli/projects/sxr/src/browse/target/scala_2.8.0/sxr_2.8.0-0.2.7-SNAPSHOT.jar"
 
   override def compileOptions =
     CompileOption("-Xplugin:" + sxrPath) ::
@@ -51,5 +51,5 @@ trait SxrLocalConfig extends SxrBaseConfig {
 }
 
 trait ScalariformConfig extends BasicScalaProject with ScalariformPlugin {
-	override def scalariformOptions = Seq(VerboseScalariform)
+  override def scalariformOptions = Seq(VerboseScalariform)
 }
